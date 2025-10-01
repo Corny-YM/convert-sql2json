@@ -97,13 +97,16 @@ export default function CSVtoJSONConverter() {
 
   const sampleData: Record<string, string> = {
     loyalty_transactions: `id	code	loyalty_id	order_id	type_transaction	loyalty_data	point_before	point_after	point_amount	customer_id	order_ref_id	create_date
-242837	ADD1739244196581	1	\\N	1	{"id":1,"name":"Thường","from_point":0,"to_point":4999,"status":1}	0	0	0	216064	1470163897	2024-06-23 17:49:23
-256311	ADD1739244382471	1	\\N	1	{"id":1,"name":"Thường","from_point":0,"to_point":4999,"status":1}	0	318	318	216064	1478778579	2024-07-07 19:14:45`,
+242837	ADD1234567890	1	\\N	1	{"id":1,"name":"Basic","from_point":0,"to_point":4999,"status":1}	0	0	0	300001	1000000001	2024-06-23 17:49:23
+256311	ADD9876543210	1	\\N	1	{"id":1,"name":"Basic","from_point":0,"to_point":4999,"status":1}	0	318	318	300001	1000000002	2024-07-07 19:14:45`,
+
     orders: `id	code	loyalty_id	customer_id	phone_number	status	payment_status	total_amount	tags	created_at
-216573	SON59652	1	485195361	0869394955	completed	paid	380000.00	["PRO139"]	2024-09-04 15:32:58
-216585	SON59531	1	485195361	0869394955	completed	paid	199000.00	[]	2024-09-04 10:34:49`,
+500001	ORD10001	1	300001	0900000001	completed	paid	380000.00	["TAG01"]	2024-09-04 15:32:58
+500002	ORD10002	1	300001	0900000002	completed	paid	199000.00	[]	2024-09-04 10:34:49`,
+
     customers: `id	customer_shop_id	loyalty_id	name	code	phone	point	customer_groups	created_at
-216064	\\N	4	Nguyễn Tâm Tuệ	CUZN479747	0869394955	33121	{"vip":true,"segment":"gold"}	2024-12-13 12:47:57`,
+300001	\\N	4	Nguyễn Văn A	CUST1001	0900000003	33121	{"vip":true,"segment":"gold"}	2024-12-13 12:47:57`,
+
     mixed_data: `id	name	metadata	price	tags	active
 1	Product A	{"color":"red","size":"M","specs":{"weight":100}}	299000	["new","sale"]	1
 2	Product B	{"color":"blue","size":"L"}	450000	["featured"]	0`,
